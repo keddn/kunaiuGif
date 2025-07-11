@@ -1,5 +1,5 @@
 import requests, uuid, os
-#A simple code where you can put an gif image for free and without a premium subscription in kunaiu app
+#Read the README file :)
 headers = {
   'User-Agent': "okhttp/3.12.13",
   'Client-Id': "kunaiu-android",
@@ -15,7 +15,7 @@ res = requests.post("https://api.kunaiu.com/anime-social/api/email/login", data=
 d, u = res['data'], res['data']['data']
 headers['Authorization'] = f"Bearer {d['access_token']}"
 
-# Even if the picture is Gif You should change its name to jpg
+
 img = "profile.jpg"
 if not os.path.exists(img): exit(" The image is not found, Make sure it is in the same path")
 
